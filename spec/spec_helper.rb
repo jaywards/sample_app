@@ -13,6 +13,7 @@ Spork.prefork do
 
   Rspec.configure do |config|
     config.mock_with :rspec
+    config.include Rails.application.routes.url_helpers
   end
 end
 
