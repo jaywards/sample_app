@@ -12,8 +12,8 @@ Spork.prefork do
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
   Rspec.configure do |config|
-    config.mock_with :rspec
     config.include Rails.application.routes.url_helpers
+    config.mock_with :rspec
   end
 end
 
